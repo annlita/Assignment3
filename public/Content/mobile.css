@@ -8,7 +8,8 @@
         background: linear-gradient(to top, #8522BA, #0E216B);
         font-family: Caveat, Verdana, Geneva, Arial, sans-serif;
         margin: 0; 
-        width:100%
+        width:100%;
+        height:1550px
         }
         
         
@@ -16,13 +17,14 @@
         height: auto;
         text-align: center;
         padding: 20px;
-        background: yellow;
+        font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
 
         #about {
         height: auto;
-        padding: 20px
+        padding: 20px;
+        font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
         #title {
@@ -30,12 +32,19 @@
         font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         padding: 20px
         }
+
+        .container {
+            font-family: Dancing Script, Verdana, Geneva, Arial, sans-serif;
+            color: #DB0632;
+        }
         
         #left-column {
         float: none;
         width : 100%;
         padding: 0;
         margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #5C0315;
         }
         
         #right-column {
@@ -43,11 +52,16 @@
         width : 400px; height: 100px;
         margin-right: 0px; 
         margin-left: 10px;
-        font-size: 10px
+        font-size: 10px;
+        margin-top: 10px;
+        background-color: #29B7E1;
+        font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
         video{
-        width: 100%
+        margin-top: 50px;
+        width: 100%;
+        
         }
 
         #projects {
@@ -60,11 +74,13 @@
         text-align: center;
         margin-right: 0;
         margin-top: 10px;
+        font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
         #contact {
         height: 800px;
-        padding: 20px
+        padding: 20px;
+        font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
         #forms {
@@ -72,7 +88,13 @@
         float: none;
         margin: 0 auto; 
         margin-bottom: 20px;
-        padding: 20px
+        padding: 20px;
+        background: #29B7E1;
+        background: -moz-linear-gradient(45deg, #6ECAE6, #114E61);
+        background: -webkit-linear-gradient(45deg, #6ECAE6, #114E61);
+        background: -o-linear-gradient(45deg, #6ECAE6, #114E61);
+        background: linear-gradient(45deg, #6ECAE6, #114E61); 
+        font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
         h1,h2,h3,h4,h5,h6,p,li {
@@ -97,6 +119,21 @@
         
         .clear {
             clear: both;
+        }
+
+        #right-column p {
+            color: antiquewhite;
+        }
+        #home h1{
+            color: antiquewhite;
+        }
+        
+        #project1 h1{
+            color: palevioletred;
+        }
+        
+        #project1 h3{
+            color: antiquewhite;
         }
         
         footer {

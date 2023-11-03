@@ -1,3 +1,4 @@
+<!-- MainIndex-->
 <%- include partials/header.ejs %>
 <%- include partials/main_nav.ejs %>
 
@@ -6,11 +7,11 @@
 <main>
    <div class="jumbotron jumbotron-fluid">
    <div class="container">
-     <h1 class ="display-4"> Welcome to the <%= title %> page </h1>
+     <h1 class ="display-2"> <%= title %> Page </h1>
      <br>
 
   </div>
-
+<!-- Linking all the pages-->
   <% if (title == "Home") { %>
           <%- include home.ejs %>
         <% } %>

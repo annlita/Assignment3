@@ -11,11 +11,13 @@ background: -o-linear-gradient(top, #8522BA, #0E216B);
 background: linear-gradient(to top, #8522BA, #0E216B);
 font-family: Caveat, Verdana, Geneva, Arial, sans-serif;
 margin: 0; 
+height: 1500px;
 }
 
 #home {
 height: 760px;
 text-align: center;
+font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
 }
 
 a:hover{
@@ -32,22 +34,29 @@ text-align: center;
 font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
 }
 
+.container {
+    font-family: Dancing Script, Verdana, Geneva, Arial, sans-serif;
+    color: #DB0632;
+}
+
 #left-column {
-float: left; height: 730px;
+float: left; height: 600px;
 width: 560px;
 }
 
 #right-column {
 float: right;  
-width: 700px; height: 730px;
-margin-right: 150px;
+width: 800px; height: 600px;
+margin-right: 50px;
 margin-left: 0px;
-font-size: 30px;
+font-size: 25px;
+font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
 }
 
 
 video {
 width:100%;
+
 }
 
 
@@ -59,6 +68,7 @@ height: 800px;
 float: center;
 text-align: center;
 margin-right: 50px;
+font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
 }
 
 #contact {
@@ -68,7 +78,7 @@ height: 800px;
 #forms {
 text-align: center;
 float: center;
-height: 730px;
+height: 900px;
 margin-right: 300px; 
 margin-left: 300px;
 margin-bottom: 200px;
@@ -77,12 +87,28 @@ background: -moz-linear-gradient(45deg, #6ECAE6, #114E61);
 background: -webkit-linear-gradient(45deg, #6ECAE6, #114E61);
 background: -o-linear-gradient(45deg, #6ECAE6, #114E61);
 background: linear-gradient(45deg, #6ECAE6, #114E61);
-
+font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,p,li {
+h1,h2,h3,h4,h5,h6,li {
 margin-left:15px;
 }
+
+#right-column p {
+    color: antiquewhite;
+}
+#home h1{
+    color: antiquewhite;
+}
+
+#project1 h1{
+    color: palevioletred;
+}
+
+#project1 h3{
+    color: antiquewhite;
+}
+
 
 header{
 background: #DB0632;
@@ -103,6 +129,7 @@ color: white;
 .clear {
     clear: both;
 }
+
 
 footer {
 text-align: center;
