@@ -41,16 +41,18 @@
         
         #left-column {
         float: none; height: 500px;
-        width: 50%;
         margin-top: 20px;
-        margin-left: 150px;
+        margin-right: 20px;
+        margin-left: 20px;
+        
+        
         }
         
         #right-column {
         float: none;  
         width: 90%; height: 300px;
         margin-right: 10px;
-        margin-left: 50px;
+        margin-left: 10px;
         font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
@@ -79,11 +81,11 @@
         
         #forms {
         text-align: center;
-        float: none;
-        height: 900px;
-        width: 500px;
-        margin-right: 150px;
-        margin-left: 150px;
+        float: center;
+        height: 750px;
+    
+        margin-left: 20px;
+        margin-right: 20px;
         background: #29B7E1;
         background: -moz-linear-gradient(45deg, #6ECAE6, #114E61);
         background: -webkit-linear-gradient(45deg, #6ECAE6, #114E61);

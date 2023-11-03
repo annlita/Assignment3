@@ -40,21 +40,23 @@
         
         #left-column {
         float: none;
-        width : 100%;
+        width : 480px;
         padding: 0;
         margin-top: 10px;
         margin-bottom: 10px;
+        margin-right: 0px;
+        margin-left: 0px;
         background-color: #5C0315;
         }
         
         #right-column {
         float: none;  
         width : 400px; height: 100px;
-        margin-right: 0px; 
+        margin-right: 10px; 
         margin-left: 10px;
+        margin-top: 550px;
         font-size: 10px;
-        margin-top: 10px;
-        background-color: #29B7E1;
+        
         font-family: Caveat Brush, Verdana, Geneva, Arial, sans-serif;
         }
         
