@@ -1,3 +1,4 @@
+//* Function to add EventListner *//
 (function(){
 function Start() 
 {
