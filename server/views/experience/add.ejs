@@ -1,0 +1,68 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="titleTextField">Title</label>
+                    <input type="text" class="form-control"
+                    id="titleTextField"
+                    placeholder="Enter the Experience Title"
+                    name="Title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="organizationTextField">Organization</label>
+                    <input type="text" class="form-control"
+                    id="organizationTextField"
+                    placeholder="Enter the Organization"
+                    name="Organization" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startdateTextField">Start Date</label>
+                    <input type="text" class="form-control"
+                    id="startdateTextField"
+                    placeholder="Enter the Start Date (dd-mm-yyyy)"
+                    name="StartDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="enddateTextArea">End Date</label>
+                    <input type="text" class="form-control"
+                    id="enddateTextArea"
+                    placeholder="Enter the End Date (dd-mm-yyyy)"
+                    name="EndDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="placeTextField">Place</label>
+                    <input type="text" class="form-control"
+                    id="placeTextField"
+                    placeholder="Enter the Place"
+                    name="Place" required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/bookslist" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
