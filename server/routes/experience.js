@@ -1,42 +1,11 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 let mongoose = require('mongoose')
 //const { router } = require('../config/app');
 let Experience = require('../models/experience');
-/*let BookController = require('../controllers/Bio_books')*/
 
-/* Get route for the Bio Books list */
 
 // Read Operation
-/*
-router.get('/books',(req,res,next) => {
-    Book.find((err,BookList) => {
-        if(err)
-        {
-            return console.error(err);
-        }
-        else
-        {
-            console.log(BookList);
-        }
-    });
-});*/
-
-/* hi router.get('/', async (req,res,next)=>{ //< Mark function as async
-    try{
-       const ExperienceList = await Experience.find(); //< Use of await keyword
-       res.render('experience/list', {
-          title: 'Experience', 
-          ExperienceList: ExperienceList
-       });
-    }catch(err){
-       console.error(err);
-       //Handle error
-       res.render('experience', {
-          error: 'Error on server'
-       });
-    }
- }); bye*/
 
  let ExperienceController = require('../controller/experience')
  /* Get route for the Bio Books list */

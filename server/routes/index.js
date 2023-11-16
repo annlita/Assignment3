@@ -1,37 +1,23 @@
 //* Creating routes *//
 
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let indexController = require('../controller/index');
+/* GET home page. */
+router.get('/', indexController.displayHomePage );
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { 
-    title: 'Home' });
-});
+router.get('/home', indexController.displayHomePage );
 
-/* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { 
-    title: 'Home' });
-});
 
 /* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('index', { 
-    title: 'About' });
-});
+router.get('/about', indexController.displayAboutPage );
 
 /* GET projects page. */
-router.get('/projects', function(req, res, next) {
-  res.render('index', { 
-    title: 'Projects' });
-});
+router.get('/projects', indexController.displayProjectsPage );
 
 
 /* GET contact page. */
-router.get('/contact', function(req, res, next) {
-  res.render('index', { 
-    title: 'Contact'});
-});
+router.get('/contact', indexController.displayContactPage);
 
 module.exports = router;

@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 //const { router } = require('../config/app');
 let Experience = require('../models/experience');
 
@@ -82,7 +82,7 @@ module.exports.ProcessEditExperience = (req,res,next)=>{
         const id = req.params.id;
         let updatedExperience = Experience({
             "_id":id,
-            "Title":req.body.Name,
+            "Title":req.body.Title,
             "Organization": req.body.Organization,
             "StartDate": req.body.StartDate,
             "EndDate": req.body.EndDate,
