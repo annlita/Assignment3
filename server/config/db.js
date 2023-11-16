@@ -1,4 +1,4 @@
 /* Connection to local DB */
 module.exports = {
-    "URI": "mongodb://127.0.0.1:27017/experienceDB"
+    "URI": "mongodb+srv://annlitajoshy:kAgntPMjLtJx5L29@cluster0.wqmckow.mongodb.net/experienceDB"
 }
