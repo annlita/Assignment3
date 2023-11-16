@@ -1,3 +1,4 @@
+/* Schema for the database */
 let mongoose = require('mongoose');
 
 let experienceModel = mongoose.Schema({

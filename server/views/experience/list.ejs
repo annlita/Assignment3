@@ -4,6 +4,7 @@
 
 
 <!--Main Content-->
+<!-- Table for Database -->
 <main class="container">
      <div class="row">
         <div class="offset-md-1 col-md-10">
@@ -14,10 +15,10 @@
         <table class="table table-bordered table-striped table-hover">
             <tr class="d-flex">
                 <th class="text-center col-2">Title</th>
-                <th class="text-center col-2">Organization</th>
-                <th class="text-center col-1">Start Date</th>
-                <th class="text-center col-4">End Date</th>
-                <th class="text-center col-1">Place</th>
+                <th class="text-center col-3">Organization</th>
+                <th class="text-center col-2">Start Date</th>
+                <th class="text-center col-2">End Date</th>
+                <th class="text-center col-2">Place</th>
                 <th class="text-center col-1"></th>
                 <th class="text-center col-1"></th>
 
@@ -26,10 +27,10 @@
             <% for(let count=0;count<ExperienceList.length;count++) { %>    
             <tr class="d-flex">
                 <td class="text-center col-2"><%= ExperienceList[count].Title %></td>
-                <td class="text-center col-2"><%= ExperienceList[count].Organization %></td>
-                <td class="text-center col-1"><%= ExperienceList[count].StartDate %></td>
-                <td class="text-center col-4"><%= ExperienceList[count].EndDate %></td>
-                <td class="text-center col-1"><%= ExperienceList[count].Place %></td>
+                <td class="text-center col-3"><%= ExperienceList[count].Organization %></td>
+                <td class="text-center col-2"><%= ExperienceList[count].StartDate %></td>
+                <td class="text-center col-2"><%= ExperienceList[count].EndDate %></td>
+                <td class="text-center col-2"><%= ExperienceList[count].Place %></td>
                 <td class="text-center col-1">
                     <a href="/experience-list/edit/<%= ExperienceList[count]._id %>" 
                         class="btn btn-primary btn-sm">

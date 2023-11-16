@@ -1,11 +1,13 @@
 let express = require('express');
 let router = express.Router();
-//const { router } = require('../config/app');
 let Experience = require('../models/experience');
 
+/* Display experience list */
 module.exports.DislayExperiencelist = async (req,res,next)=>{ //< Mark function as async
     try{
+        /* fetching experience list */
        const ExperienceList = await Experience.find(); //< Use of await keyword
+       /* rendering experience list */
        res.render('experience/list', {
           title: 'Experience', 
           ExperienceList: ExperienceList
@@ -19,6 +21,7 @@ module.exports.DislayExperiencelist = async (req,res,next)=>{ //< Mark function 
     }
  };
 
+ /* Render to add new experience */
  module.exports.AddExperience = async (req,res,next)=>{
     try{
         res.render('experience/add',
@@ -36,6 +39,7 @@ module.exports.DislayExperiencelist = async (req,res,next)=>{ //< Mark function 
     }
 };
 
+/* Process to add new experience  */
 module.exports.ProcessExperience = async (req,res,next)=>{
     try{
         let newExperience = Experience({
@@ -45,6 +49,7 @@ module.exports.ProcessExperience = async (req,res,next)=>{
             "EndDate": req.body.EndDate,
             "Place": req.body.Place
         });
+        /* Save new experience  */
         Experience.create(newExperience).then(() =>{
             res.redirect('/experience-list')
         })
@@ -58,9 +63,12 @@ module.exports.ProcessExperience = async (req,res,next)=>{
     }
 };
 
+/* Render to edit experience */
 module.exports.EditExperience = async (req,res,next)=>{
     try{
+        /* Retrieve experience */
     const id = req.params.id;
+    /* Render to edit */
     const experienceToEdit = await Experience.findById(id);
     res.render('experience/edit',
     {
@@ -77,6 +85,7 @@ catch(error){
 }
 }
 
+/* Process to update */
 module.exports.ProcessEditExperience = (req,res,next)=>{
     try{
         const id = req.params.id;
@@ -88,6 +97,7 @@ module.exports.ProcessEditExperience = (req,res,next)=>{
             "EndDate": req.body.EndDate,
             "Place": req.body.Place
         });
+        /* Create updated form and redirect */
         Experience.findByIdAndUpdate(id,updatedExperience).then(()=>{
             res.redirect('/experience-list')
         });
@@ -100,7 +110,7 @@ module.exports.ProcessEditExperience = (req,res,next)=>{
         });
     }
 }
-
+/* Delete Experience */
 module.exports.DeleteExperience = (req,res,next)=>{
     try{
         let id = req.params.id;

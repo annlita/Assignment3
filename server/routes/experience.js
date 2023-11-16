@@ -1,14 +1,13 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose')
-//const { router } = require('../config/app');
 let Experience = require('../models/experience');
 
 
 // Read Operation
 
  let ExperienceController = require('../controller/experience')
- /* Get route for the Bio Books list */
+ /* Get route for the Experience list */
  // Read Operation
  router.get('/', ExperienceController.DislayExperiencelist);
 
