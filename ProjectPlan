@@ -1,22 +1,28 @@
-Project Title: NodeJS Web Application Development
-
-Aim: Construct a web application using NodeJS, ExpressJS, MongoDB, Mongoose, and EJS.
+Project Plan: Construct a portfolio web application using NodeJS, ExpressJS, MongoDB, Mongoose, and EJS.
 
 1. Day 1-2: Planning and Design
 - Identify the needs for the application - Create the database structure
-- Arrange the project's hierarchy.
+- Making database experienceDB to contain my work and volunteer experience
+- Creating collection experience to include entries Title, Organization, StartDate, EndDate, and Place
 
-2. Backend implementation (Days 3–4)
-To store data, integrate MongoDB and Mongoose. -Set up NodeJS and ExpressJS.
-- Create controller and route files.
+2. Day 3-4: Backend implementation
+- Installing Mongoose
+- Connecting local database to website
 
-3. Frontend implementation (Days 5–6)
--Use UI design -Incorporate EJS templating -Customise appearance using CSS
-
-4. Testing (Days 7-8)
--Evaluate frontend and backend components using unit testing -Conduct integration testing
+3. Day 5-6: Frontend implementation
+ - Customise appearance using CSS
+ - Navigation for database page
+ - Separating server view
+ 
+4. Day 7-8: CRUD
+- Implementing Add Operation
+- Implementing Update Operation
+- Implementing Delete Operation
+- Creating controllers and routes
 
 5. Day 9–10: Documentation & Deployment
--Record functionality and code.
--Install the finished program.
+- Commenting
+- Deplying database on cloud
+- Pushing on github
+- Rendering website
 
