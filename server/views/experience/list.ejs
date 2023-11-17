@@ -8,10 +8,12 @@
 <main class="container">
      <div class="row">
         <div class="offset-md-1 col-md-10">
-           <br> <h1><% title %> </h1> <br>  
+           <div><br> <h1> Experience </h1> <br></div>  
            <a href = "/experience-list/add" class="btn btn-primary" role="button">
-           <i class = "fas fa-plus-circle"> </i> Add Experience </a>  
+           <!-- Add Experience and Edit Experience Buttons-->
+           <i class = "fas fa-plus-circle"> </i> Add Experience </a>  <br><br>
         
+        <!-- Titles -->
         <table class="table table-bordered table-striped table-hover">
             <tr class="d-flex">
                 <th class="text-center col-2">Title</th>
@@ -24,6 +26,8 @@
 
 
             </tr>
+
+            <!-- Content-->
             <% for(let count=0;count<ExperienceList.length;count++) { %>    
             <tr class="d-flex">
                 <td class="text-center col-2"><%= ExperienceList[count].Title %></td>
@@ -33,7 +37,7 @@
                 <td class="text-center col-2"><%= ExperienceList[count].Place %></td>
                 <td class="text-center col-1">
                     <a href="/experience-list/edit/<%= ExperienceList[count]._id %>" 
-                        class="btn btn-primary btn-sm">
+                        class="btn btn-primary btn-sm"> 
                         <i class="fas fa-pencil-alt"></i> Edit
                     </a>
                 </td>
