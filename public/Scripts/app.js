@@ -17,3 +17,4 @@ for(button of deleteButtons)
 }
 window.addEventListener("load", Start);
 })();
+//* Warning for delete button *//

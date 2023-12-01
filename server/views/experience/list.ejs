@@ -8,14 +8,19 @@
 <main class="container">
      <div class="row">
         <div class="offset-md-1 col-md-10">
-           <div><br> <h1> Experience </h1> <br></div>  
+           <div><br> <h1> Experience </h1> <br></div>
+           <% if(typeof displayName=='string' && displayName) { %>  
            <a href = "/experience-list/add" class="btn btn-primary" role="button">
            <!-- Add Experience and Edit Experience Buttons-->
            <i class = "fas fa-plus-circle"> </i> Add Experience </a>  <br><br>
-        
+           <br>
+            <% } %>
+           <br>
+
         <!-- Titles -->
         <table class="table table-bordered table-striped table-hover">
             <tr class="d-flex">
+            <% if(typeof displayName=='string' && displayName) { %>
                 <th class="text-center col-2">Title</th>
                 <th class="text-center col-3">Organization</th>
                 <th class="text-center col-2">Start Date</th>
@@ -23,13 +28,20 @@
                 <th class="text-center col-2">Place</th>
                 <th class="text-center col-1"></th>
                 <th class="text-center col-1"></th>
-
+            <% } else { %>
+                <th class="text-center col-2">Title</th>
+                <th class="text-center col-3">Organization</th>
+                <th class="text-center col-2">Start Date</th>
+                <th class="text-center col-2">End Date</th>
+                <th class="text-center col-3">Place</th>
+            <% } %>
 
             </tr>
 
             <!-- Content-->
             <% for(let count=0;count<ExperienceList.length;count++) { %>    
             <tr class="d-flex">
+            <% if(typeof displayName=='string' && displayName) { %>
                 <td class="text-center col-2"><%= ExperienceList[count].Title %></td>
                 <td class="text-center col-3"><%= ExperienceList[count].Organization %></td>
                 <td class="text-center col-2"><%= ExperienceList[count].StartDate %></td>
@@ -47,8 +59,15 @@
                         <i class="fas trash-alt"></i> Delete
                     </a>
                 </td>
+            <% } else { %>
+            <td class="text-center col-2"><%= ExperienceList[count].Title %></td>
+            <td class="text-center col-3"><%= ExperienceList[count].Organization %></td>
+            <td class="text-center col-2"><%= ExperienceList[count].StartDate %></td>
+            <td class="text-center col-2"><%= ExperienceList[count].EndDate %></td>
+            <td class="text-center col-3"><%= ExperienceList[count].Place %></td>
+        <% } %>    
             </tr>
-            <% } %>
+        <% } %>
         </table>
     </div>
 

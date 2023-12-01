@@ -10,7 +10,9 @@ module.exports.DislayExperiencelist = async (req,res,next)=>{ //< Mark function 
        /* rendering experience list */
        res.render('experience/list', {
           title: 'Experience', 
+          displayName: req.user ? req.user.displayName:'',
           ExperienceList: ExperienceList
+          
        });
     }catch(err){
        console.error(err);
@@ -26,7 +28,8 @@ module.exports.DislayExperiencelist = async (req,res,next)=>{ //< Mark function 
     try{
         res.render('experience/add',
         {
-            title:'Add Experience'
+            title:'Add Experience',
+            displayName: req.user ? req.user.displayName:''
         })
     }
     catch(err)
@@ -73,6 +76,7 @@ module.exports.EditExperience = async (req,res,next)=>{
     res.render('experience/edit',
     {
         title:'Edit Experience',
+        displayName: req.user ? req.user.displayName:'',
         Experience:experienceToEdit
     })
 }

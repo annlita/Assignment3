@@ -8,7 +8,8 @@
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
 
-            <form class="form" method="POST">
+        <!-- Title for the Edit page form-->
+            <form class="form" method="POST"> <!-- Retrieving existing data-->
                 <div class="form-group">
                     <label for="titleTextField">Title</label>
                     <input type="text" class="form-control"
@@ -18,7 +19,8 @@
                     name="Title" 
                     required> 
                 </div>
-
+        
+        <!-- Organization for the Edit page form-->
                 <div class="form-group">
                     <label for="organizationTextField">Organization</label>
                     <input type="text" class="form-control"
@@ -29,7 +31,8 @@
                     required>
                     
                 </div>
-
+        
+        <!-- Start Date for the Edit page form-->
                 <div class="form-group">
                     <label for="startdateTextField">Start Date</label>
                     <input type="text" class="form-control"
@@ -41,6 +44,7 @@
                     
                 </div>
 
+        <!-- End Date for the Edit page form-->
                 <div class="form-group">
                     <label for="enddateTextArea">End Date</label>
                     <input type="text" class="form-control"
@@ -51,7 +55,8 @@
                     required>
                     
                 </div>
-
+        
+        <!-- Place for the Edit page form-->
                 <div class="form-group">
                     <label for="placeTextField">Place</label>
                     <input type="text" class="form-control"
@@ -61,7 +66,8 @@
                     name="Place"
                      required>
                 </div>
-
+        
+        <!-- Submit and Cancel buttons-->
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
                 

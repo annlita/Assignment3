@@ -9,6 +9,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       
       <!-- Link to all Pages for Navigation-->
+      <!-- Home Page Link for Navigation-->
         <li class="nav-item">
         <% if (title == "Home") { %>
           <a class="nav-link active" href="/home"> 
@@ -17,6 +18,7 @@
         <% } %>
           <i class="fa-solid fa-house"></i> Home</a>
         </li>
+      
       
         <li class="nav-item">
         <% if (title == "About") { %>
@@ -27,6 +29,7 @@
           <i class="fa-solid fa-user"></i> About</a>
         </li>
       
+      
         <li class="nav-item">
         <% if (title == "Projects") { %>
           <a class="nav-link active"  href="/projects">
@@ -35,7 +38,8 @@
         <% } %>
           <i class="fa-solid fa-rocket"></i> Projects</a>
         </li>
-
+      
+      
         <li class="nav-item">
         <% if (title == "Experience") { %>
           <a class="nav-link active"  href="/experience-list">
@@ -44,6 +48,7 @@
         <% } %>
           <i class="fa-solid fa-briefcase"></i> Experience</a>
         </li>
+      
       
         <li class="nav-item">
         <% if (title == "Contact") { %>
@@ -54,7 +59,22 @@
           <i class="fa-solid fa-phone"></i> Contact</a>
         </li>
 
-        
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text">
+            <i class="fas fa-lg fa-user"></i>
+            Welcome, <%= displayName %>
+          </li>
+          <li class="nav-item">
+              <a href="/logout" class="nav-link" >
+              <i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">
+              <i class="fa-solid fa-sign-in-alt"></i> Login</a>
+          </li>
+          <% } %>
+
     </div>
   </div>
 </nav>

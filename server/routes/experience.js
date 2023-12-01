@@ -7,22 +7,31 @@ let Experience = require('../models/experience');
 // Read Operation
 
  let ExperienceController = require('../controller/experience')
+
+ // helper function
+function requireAuth(req,res,next){
+    if(!req.isAuthenticated())
+    {
+        return res.redirect('/login')
+    }
+    next();
+}
  /* Get route for the Experience list */
  // Read Operation
  router.get('/', ExperienceController.DislayExperiencelist);
 
 /* Add Operation */
 /* Get route for displaying Add operation - Create Operation*/
-router.get('/add', ExperienceController.AddExperience);
+router.get('/add',requireAuth, ExperienceController.AddExperience);
 /* Post route for displaying Add operation - Create Operation*/
-router.post('/add', ExperienceController.ProcessExperience);
+router.post('/add', requireAuth, ExperienceController.ProcessExperience);
 /* Edit Operation */
 /* Get route for displaying Edit operation - Update Operation*/
-router.get('/edit/:id', ExperienceController.EditExperience);
+router.get('/edit/:id', requireAuth, ExperienceController.EditExperience);
 /* Post route for displaying Edit operation - Update Operation*/
-router.post('/edit/:id', ExperienceController.ProcessEditExperience);
+router.post('/edit/:id', requireAuth, ExperienceController.ProcessEditExperience);
 /* Delete Operation */
 /* Get route for displaying Delete operation - Deletion*/
-router.get('/delete/:id', ExperienceController.DeleteExperience);
+router.get('/delete/:id', requireAuth, ExperienceController.DeleteExperience);
 
  module.exports = router;
